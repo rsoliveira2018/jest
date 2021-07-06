@@ -1,4 +1,4 @@
-const student = require('./student');
+const student = require('../../src/student');
 
 describe('testes para alunos', () =>{
     it('Deve retornar 10 quando as notas forem 5, 3 e 2', () => {
@@ -19,5 +19,15 @@ describe('testes para alunos', () =>{
     it('Deve dobrar a nota quando ela for maior que 9', () => {
         const notes = [10,5,3];
         expect(student.sum(notes)).toEqual(28);
+    })
+
+    it('Deve retornar 3 quando a média aritmética simples for 3', () =>{
+        const notes = [3, 5, 1];
+        expect(student.avg(notes)).toEqual(3);
+    })
+
+    it('Deve retornar média 0 quando o aluno tiver ao menos uma nota 0', () => {
+        const notes = [10, 9, 0];
+        expect(student.avg(notes)).toEqual(0);
     })
 })
