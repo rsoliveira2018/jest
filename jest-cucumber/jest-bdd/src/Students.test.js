@@ -1,13 +1,12 @@
 import { defineFeature, loadFeature } from 'jest-cucumber';
-import { avg } from '../../src/student';
+import { avg } from './Student';
 
-const feature = loadFeature('./students.feature')
+const feature = loadFeature('./src/Students.feature')
 
 defineFeature(feature, test => {
 
     let isApproved = false;
-    let finalGrade = 0;
-    const grades = [];
+    let grades = [];
 
     beforeEach(()=>{
         //finalGrande = avg(grades);

@@ -1,4 +1,4 @@
-const student = require('../../src/student');
+const student = require('../src/student');
 
 describe('testes para alunos', () =>{
     it('Deve retornar 10 quando as notas forem 5, 3 e 2', () => {
